@@ -1,7 +1,11 @@
 # Mutable NFTs
 
-Quello di questa settimana prevede di creare NFT che "evolvono" secondo alcune logiche. Molto figo
-Nel concreto, si crea un NFT "warrior" che ha alcuni stat (livello, vita, forza, velocità) che si vedono nella sua immagine.
-Puoi mandare ad allenare l'NFT e, facendolo, gli stats aumentano e l'immagine cambia con i nuovi stats
-Interessante perché non si una IPFS, è tutto deployato sulla chain e quindi lo smart contract ha controllo completo sull'immagine e sugli attributi del NFT.
-Il contratto che ho deployato prima su polygon è proprio questo. Mi hanno fatto usare polygon perché appunto tutti i dati erano onchain
+This week's project is about creating NFTs that "evolve" according to some logic.
+
+A "warrior" NFT is created with some stats (level, HP, strength, speed) and those are visible on its image.
+Moreover you can train the NFT so that its stats randomly improve. Then the image changes by reflecting the new stats.
+
+We do not use IPFS to store the image nor the metadata, it is all deployed on chain! Therefore the smart contract has complete control over the NFT's image and metadata.
+The image is created as an SVG and then converted to Base64 format. The browser knows how do display Base64 images and we can manage them in Solidity as strings.
+
+The contract is deployed on Polygon to save gas fees because deploying everything on chain is costly.
